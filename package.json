@@ -1,0 +1,9 @@
+{
+  "name": "test-bob-jenkins",
+  "version": "1.0.0",
+  "description": "Test project for Bob-Jenkins integration",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Running tests...\" && exit 0"
+  }
+}
