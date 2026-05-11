@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureBank - Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="bank-logo">
+            <h1>🏦 SecureBank</h1>
+            <p>Your Trusted Banking Partner</p>
+        </div>
+        
+        <form class="login-form" id="loginForm">
+            <h2>Welcome Back</h2>
+            
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input 
+                    type="text" 
+                    id="username" 
+                    name="username" 
+                    placeholder="Enter your username"
+                    required
+                    autocomplete="username"
+                >
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="Enter your password"
+                    required
+                    autocomplete="current-password"
+                >
+            </div>
+            
+            <button type="submit" class="btn-login">Sign In</button>
+            
+            <div class="login-footer">
+                <p>Demo Mode: Use any username and password</p>
+                <p style="margin-top: 10px; font-size: 12px;">© 2026 SecureBank. All rights reserved.</p>
+            </div>
+        </form>
+    </div>
+    
+    <script src="/js/login.js"></script>
+</body>
+</html>

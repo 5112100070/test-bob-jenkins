@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureBank - Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <h1>🏦 SecureBank</h1>
+            </div>
+            <div class="navbar-user">
+                <div class="user-info">
+                    <div class="user-name" id="userName">John Doe</div>
+                    <div class="user-role">Premium Account</div>
+                </div>
+                <button class="btn-logout" onclick="logout()">Logout</button>
+            </div>
+        </nav>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <!-- Welcome Section -->
+            <div class="welcome-section">
+                <h2>Welcome back, <span id="welcomeName">John</span>! 👋</h2>
+                <p>Here's your account overview for today</p>
+            </div>
+
+            <!-- Account Cards -->
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">Total Balance</span>
+                        <div class="card-icon primary">💰</div>
+                    </div>
+                    <div class="card-amount">$125,450.00</div>
+                    <div class="card-subtitle">Across all accounts</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">Savings Account</span>
+                        <div class="card-icon success">💵</div>
+                    </div>
+                    <div class="card-amount">$85,230.50</div>
+                    <div class="card-subtitle">Account: ****7890</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <span class="card-title">Checking Account</span>
+                        <div class="card-icon accent">💳</div>
+                    </div>
+                    <div class="card-amount">$40,219.50</div>
+                    <div class="card-subtitle">Account: ****1234</div>
+                </div>
+            </div>
+
+            <!-- Recent Transactions -->
+            <div class="transactions-section">
+                <div class="section-header">
+                    <h3>Recent Transactions</h3>
+                    <button class="btn-view-all">View All</button>
+                </div>
+                
+                <ul class="transaction-list">
+                    <li class="transaction-item">
+                        <div class="transaction-info">
+                            <div class="transaction-icon credit">↓</div>
+                            <div class="transaction-details">
+                                <h4>Salary Deposit</h4>
+                                <p>Jan 10, 2026 • 09:30 AM</p>
+                            </div>
+                        </div>
+                        <div class="transaction-amount credit">+$5,500.00</div>
+                    </li>
+                    
+                    <li class="transaction-item">
+                        <div class="transaction-info">
+                            <div class="transaction-icon debit">↑</div>
+                            <div class="transaction-details">
+                                <h4>Rent Payment</h4>
+                                <p>Jan 08, 2026 • 02:15 PM</p>
+                            </div>
+                        </div>
+                        <div class="transaction-amount debit">-$1,200.00</div>
+                    </li>
+                    
+                    <li class="transaction-item">
+                        <div class="transaction-info">
+                            <div class="transaction-icon debit">↑</div>
+                            <div class="transaction-details">
+                                <h4>Grocery Store</h4>
+                                <p>Jan 07, 2026 • 06:45 PM</p>
+                            </div>
+                        </div>
+                        <div class="transaction-amount debit">-$156.80</div>
+                    </li>
+                    
+                    <li class="transaction-item">
+                        <div class="transaction-info">
+                            <div class="transaction-icon credit">↓</div>
+                            <div class="transaction-details">
+                                <h4>Freelance Payment</h4>
+                                <p>Jan 05, 2026 • 11:20 AM</p>
+                            </div>
+                        </div>
+                        <div class="transaction-amount credit">+$2,300.00</div>
+                    </li>
+                    
+                    <li class="transaction-item">
+                        <div class="transaction-info">
+                            <div class="transaction-icon debit">↑</div>
+                            <div class="transaction-details">
+                                <h4>Utility Bills</h4>
+                                <p>Jan 03, 2026 • 10:00 AM</p>
+                            </div>
+                        </div>
+                        <div class="transaction-amount debit">-$245.50</div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="transactions-section">
+                <div class="section-header">
+                    <h3>Quick Actions</h3>
+                </div>
+                
+                <div class="quick-actions">
+                    <div class="action-btn" onclick="alert('Transfer feature - Coming soon!')">
+                        <div class="action-btn-icon">💸</div>
+                        <div class="action-btn-text">Transfer Money</div>
+                    </div>
+                    
+                    <div class="action-btn" onclick="alert('Pay Bills feature - Coming soon!')">
+                        <div class="action-btn-icon">📄</div>
+                        <div class="action-btn-text">Pay Bills</div>
+                    </div>
+                    
+                    <div class="action-btn" onclick="alert('Mobile Recharge feature - Coming soon!')">
+                        <div class="action-btn-icon">📱</div>
+                        <div class="action-btn-text">Mobile Recharge</div>
+                    </div>
+                    
+                    <div class="action-btn" onclick="alert('Card Management feature - Coming soon!')">
+                        <div class="action-btn-icon">💳</div>
+                        <div class="action-btn-text">Manage Cards</div>
+                    </div>
+                    
+                    <div class="action-btn" onclick="alert('Statements feature - Coming soon!')">
+                        <div class="action-btn-icon">📊</div>
+                        <div class="action-btn-text">View Statements</div>
+                    </div>
+                    
+                    <div class="action-btn" onclick="alert('Support feature - Coming soon!')">
+                        <div class="action-btn-icon">💬</div>
+                        <div class="action-btn-text">Customer Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get username from sessionStorage
+        const username = sessionStorage.getItem('username') || 'Guest';
+        document.getElementById('userName').textContent = username;
+        document.getElementById('welcomeName').textContent = username.split(' ')[0];
+
+        // Logout function
+        function logout() {
+            sessionStorage.removeItem('username');
+            window.location.href = '/';
+        }
+
+        // Check if user is logged in
+        if (!sessionStorage.getItem('username')) {
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>
