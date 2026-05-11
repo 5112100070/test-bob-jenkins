@@ -69,6 +69,31 @@ pipeline {
             }
         }
         
+        stage('Start Smoke Test') {
+            steps {
+                echo '🚀 Verifying application can start without crashing...'
+                sh '''
+                    set -e
+                    PORT=3500 npm run start > app-start.log 2>&1 &
+                    APP_PID=$!
+                    echo "Started app with PID ${APP_PID}"
+                    sleep 5
+
+                    if ! kill -0 "${APP_PID}" 2>/dev/null; then
+                        echo "Application exited unexpectedly during startup"
+                        cat app-start.log
+                        exit 1
+                    fi
+
+                    echo "Application is running on port 3500"
+
+                    kill "${APP_PID}"
+                    wait "${APP_PID}" || true
+                    echo "Application stopped after startup verification"
+                '''
+            }
+        }
+
         stage('Package') {
             steps {
                 echo '📦 Packaging application...'

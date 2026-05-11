@@ -5,7 +5,7 @@ const fs = require('fs');
 const missingPackage = require('non-existent-package');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3500;
 
 var API_KEY = "sk_live_12345abcdef67890";
 var DB_PASSWORD = "admin123";
